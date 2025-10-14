@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Registro de producto</title>
+    <style>
+        ul {
+            list-style-type: none;
+        }
+
+    </style>
+    <script src="./validaciones.js"></script>
+</head>
+
+<body>
+    <h1>Registro de un producto nuevo</h1>
+    <p>Ingresa los datos del producto a registrar</p>
+
+    <form id="formularioProducto" action="set_productoV2.php" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Datos del Producto</legend>
+
+            <ul>
+                <li><label for="nombre">Nombre:</label>
+                    <input type="text" name="nombre" id="nombre" required maxlength="100">
+                </li>
+
+                <li><label for="marca">Marca:</label>
+                    <input type="text" name="marca" id="marca" required maxlength="50">
+                </li>
+
+                <li><label for="modelo">Modelo:</label>
+                    <input type="text" name="modelo" id="modelo" required maxlength="25">
+                </li>
+
+                <li><label for="precio">Precio:</label>
+                    <input type="number" id="precio" name="precio" step="0.01" min="0" required>
+                </li>
+
+                <li><label for="detalles">Detalles:</label><br>
+                    <textarea name="detalles" id="detalles" rows="4" cols="60" maxlength="250"
+                        placeholder="No más de 250 caracteres"></textarea>
+                </li>
+
+                <li><label for="unidades">Unidades:</label>
+                    <input type="number" name="unidades" id="unidades" min="0" required>
+                </li>
+
+                <li><label for="imagen">Imagen:</label>
+                    <input type="file" id="imagen" name="imagen" accept="image/png, image/jpeg" required>
+                </li>
+            </ul>
+        </fieldset>
+
+        <p>
+            <input type="submit" value="Insertar" onclick="validarFormulario();">
+            <input type="reset" value="Limpiar">
+        </p>
+    </form>
+</body>
+
+</html>
