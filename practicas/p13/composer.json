@@ -1,0 +1,16 @@
+{
+    "name": "ceci/tecweb-myapi",
+    "description": "Gestión CRUD con PHP y Composer (PSR-4)",
+    "autoload": {
+        "psr-4": {
+            "TECWEB\\MYAPI\\": "backend/myapi/"
+    }
+    },
+    "authors": [
+        {
+            "name": "CeciG24",
+            "email": "ceciliaga604@gmail.com"
+        }
+    ],
+    "require": {}
+}
